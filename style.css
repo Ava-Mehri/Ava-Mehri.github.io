@@ -1,111 +1,72 @@
-/* Navigation Bar Styling */
-.navbar {
+/* Base Page Setup */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
     display: flex;
     justify-content: center;
-    gap: 20px;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Card Container */
+.profile-container {
     background: #ffffff;
-    padding: 15px;
-    margin-bottom: 25px;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-    width: 100%;
     max-width: 750px;
+    width: 100%;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
     box-sizing: border-box;
+}
+
+/* Shared Navigation Bar Styling */
+.navbar {
+    display: flex;
+    justify-content: flex-start; /* Aligns menu links to the left */
+    gap: 15px;
+    margin-bottom: 35px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
 }
 
 .navbar a {
     text-decoration: none;
     color: #555;
     font-weight: 500;
-    padding: 8px 16px;
-    border-radius: 4px;
-    transition: background 0.2s;
+    padding: 8px 14px;
+    border-radius: 6px;
+    transition: all 0.2s ease-in-out;
 }
 
 .navbar a:hover, .navbar a.active {
-    background-color: #f0f0f0;
+    background-color: #f0f4f8;
     color: #0073b1;
 }
 
-/* Page Titles */
-.page-title {
-    margin-top: 0;
-    margin-bottom: 20px;
-    border-bottom: 2px solid #0073b1;
-    padding-bottom: 8px;
-    font-size: 1.8rem;
-}
-
-/* Publications List */
-.pub-list {
-    list-style: none;
-    padding: 0;
-}
-
-.pub-item {
-    margin-bottom: 25px;
-    padding-bottom: 15px;
-    border-bottom: 1px dashed #eee;
-}
-
-.pub-title {
-    font-weight: 600;
-    color: #111;
-    font-size: 1.1rem;
-    margin: 0 0 5px 0;
-}
-
-.pub-authors {
-    color: #555;
-    font-size: 0.95rem;
-    margin: 0 0 5px 0;
-}
-
-.pub-authors strong {
-    color: #000; /* Bold your own name */
-}
-
-.pub-venue {
-    font-style: italic;
-    color: #666;
-    font-size: 0.95rem;
-}
-
-.pub-links {
-    margin-top: 8px;
-}
-
-.pub-links a {
-    font-size: 0.85rem;
-    text-decoration: none;
-    color: #0073b1;
-    margin-right: 12px;
-    border: 1px solid #0073b1;
-    padding: 2px 8px;
-    border-radius: 4px;
-}
-
-.pub-links a:hover {
-    background: #0073b1;
-    color: #fff;
-}
-
-/* Resume/CV Viewer Wrapper */
-.resume-viewer {
-    width: 100%;
-    height: 600px;
-    border: 1px solid #ddd;
-    border-radius: 6px;
-    margin-top: 15px;
-}
-    object-fit: cover;
-    border: 3px solid #0073b1;
+/* Small, Circular Profile Image (Top-Left) */
+.profile-photo {
+    width: 95px;                  /* Compact size */
+    height: 95px;                 /* Must match width exactly for a perfect circle */
+    border-radius: 50%;           /* Clips corners into a circle */
+    object-fit: cover;            /* Prevents image from stretching or squishing */
+    display: block;
+    margin: 0 auto 20px 0;        /* Aligns to the far left; creates bottom spacing */
+    border: 2px solid #0073b1;    /* Professional theme color accent line */
+    background-color: #eee;       /* Fallback background if photo loads slowly */
 }
 
 /* Text Formatting */
+.about-me {
+    text-align: left;
+    margin-bottom: 30px;
+}
+
 .about-me h1 {
     margin-top: 0;
-    font-size: 2rem;
+    font-size: 1.8rem;
     color: #111;
 }
 
@@ -118,12 +79,12 @@
 .profile-links {
     display: flex;
     flex-wrap: wrap;
-    gap: 15px;
+    gap: 12px;
     border-top: 1px solid #eee;
-    padding-top: 20px;
+    padding-top: 25px;
 }
 
-/* Stylized Button-like Links */
+/* Button-style Links */
 .profile-links a {
     display: inline-flex;
     align-items: center;
@@ -137,20 +98,25 @@
     transition: all 0.2s ease-in-out;
 }
 
-/* Hover States */
+/* Link Hover Animation */
 .profile-links a:hover {
-    background-color: #f0f0f0;
+    background-color: #f8f9fa;
     border-color: #bbb;
     transform: translateY(-2px);
+    color: #0073b1;
 }
 
-/* Responsive adjustments for mobile screens */
+/* Mobile Screens Adjustments */
 @media (max-width: 600px) {
-    .profile-header {
-        flex-direction: column;
-        text-align: center;
+    .profile-container {
+        padding: 25px;
     }
-    .profile-links {
+    .navbar {
         justify-content: center;
+        gap: 5px;
+    }
+    .navbar a {
+        padding: 6px 10px;
+        font-size: 0.9rem;
     }
 }
