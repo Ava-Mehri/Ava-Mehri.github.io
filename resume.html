@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume - Your Name</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cloudflare.com">
+</head>
+<body>
+
+    <main class="profile-container">
+        <!-- Top Navigation -->
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="publications.html">Publications</a>
+            <a href="resume.html" class="active">Resume / CV</a>
+        </nav>
+
+        <h2 class="page-title">Resume / CV</h2>
+        
+        <p>You can read my full CV directly below, or click the download option to save a copy locally.</p>
+
+        <!-- Primary Action Download Button -->
+        <div style="margin-bottom: 20px;">
+            <a href="assets/Your_Resume.pdf" download class="navbar" style="display:inline-flex; width:auto; text-decoration:none; color:#ffffff; background-color:#0073b1; font-weight:600;">
+                <i class="fa-solid fa-file-arrow-down" style="margin-right:8px; margin-top:3px;"></i> Download PDF Resume
+            </a>
+        </div>
+
+        <!-- Embedded Interactive PDF Viewer -->
+        <iframe src="assets/Your_Resume.pdf" class="resume-viewer" type="application/pdf">
+            <p>Your browser does not support embedded PDFs. Please use the download link above to view my file.</p>
+        </iframe >
+    </main>
+
+</body>
+</html>
