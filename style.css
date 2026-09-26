@@ -1,8 +1,10 @@
-/* Base Page Setup */
+/* ==========================================================================
+   1. Base Page Setup & Global Variables (Lavender/Violet Palette)
+   ========================================================================== */
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    background-color: #f6f5f9;    /* Soft lavender tinted white background */
-    color: #3d3a45;              /* Deep muted violet for soft, legible body text */
+    background-color: #f6f5f9;    /* Soft lavender tinted white */
+    color: #3d3a45;              /* Deep muted violet body text */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -11,24 +13,26 @@ body {
     padding: 20px;
 }
 
-/* Card Container */
+/* Card Container Base */
 .profile-container {
     background: #ffffff;
     max-width: 750px;
     width: 100%;
     padding: 40px;
     border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(106, 90, 205, 0.04); /* Subtly tinted shadow */
+    box-shadow: 0 4px 20px rgba(106, 90, 205, 0.04);
     box-sizing: border-box;
 }
 
-/* Page Width Override for Resume and Publications Modules */
+/* Adaptive Page Width Modifiers */
 .profile-container.resume-page-container,
 .profile-container.publications-page-container {
     max-width: 1000px;
 }
 
-/* Shared Navigation Bar Styling */
+/* ==========================================================================
+   2. Shared Navigation Bar
+   ========================================================================== */
 .navbar {
     display: flex;
     justify-content: flex-start;
@@ -47,13 +51,14 @@ body {
     transition: all 0.2s ease-in-out;
 }
 
-/* Active and Hover Menu Links - Soft Light Purple tint */
 .navbar a:hover, .navbar a.active {
     background-color: #f1ecf7;  /* Soft lavender tint */
-    color: #7952b3;             /* Distinct violet accent */
+    color: #7952b3;             /* Core Violet accent */
 }
 
-/* Small, Circular Profile Image (Top-Left) */
+/* ==========================================================================
+   3. Homepage / Profile Module
+   ========================================================================== */
 .profile-photo {
     width: 95px;
     height: 95px;
@@ -61,11 +66,10 @@ body {
     object-fit: cover;
     display: block;
     margin: 0 auto 20px 0;
-    border: 2px solid #7952b3;   /* Violet border line accent */
+    border: 2px solid #7952b3;   /* Violet border accent */
     background-color: #eee;
 }
 
-/* Text Formatting */
 .about-me {
     text-align: left;
     margin-bottom: 30px;
@@ -74,7 +78,7 @@ body {
 .about-me h1 {
     margin-top: 0;
     font-size: 1.8rem;
-    color: #231f2b;             /* Dark rich violet-black for crisp headers */
+    color: #231f2b;             /* Crisp rich header text */
 }
 
 .about-me p {
@@ -82,7 +86,7 @@ body {
     color: #514c5c;
 }
 
-/* Link Row Layout */
+/* Social & Academic Footer Link Row */
 .profile-links {
     display: flex;
     flex-wrap: wrap;
@@ -91,7 +95,6 @@ body {
     padding-top: 25px;
 }
 
-/* Social & Academic Button Links */
 .profile-links a {
     display: inline-flex;
     align-items: center;
@@ -105,20 +108,19 @@ body {
     transition: all 0.2s ease-in-out;
 }
 
-/* Link Hover Animation */
 .profile-links a:hover {
     background-color: #faf9fc;
     border-color: #beadd6;
     transform: translateY(-2px);
-    color: #7952b3;             /* Shifts text to bold violet on hover */
+    color: #7952b3;             /* Shifts text to bold violet */
 }
 
-/* -------------------------------------------------------------
-   Publications Specific Classes
-------------------------------------------------------------- */
+/* ==========================================================================
+   4. Publications Specific Module
+   ========================================================================== */
 .category-heading {
     font-size: 1.3rem;
-    color: #7952b3;             /* Violet category headings */
+    color: #7952b3;             /* Uniform violet headers */
     margin-top: 30px;
     margin-bottom: 15px;
     border-bottom: 1px solid #e8e5f0;
@@ -142,10 +144,9 @@ body {
     line-height: 1.6;
 }
 
-/* Compact Alpha-Numeric Label Box (J1, C1, etc.) */
 .pub-label {
-    background-color: #f1ecf7;  /* Light lavender container */
-    color: #7952b3;             /* Dark violet bold labels */
+    background-color: #f1ecf7;  /* Light lavender block */
+    color: #7952b3;             /* Violet bold label */
     font-weight: 700;
     font-size: 0.85rem;
     padding: 4px 8px;
@@ -176,14 +177,13 @@ body {
     color: #555;
 }
 
-/* -------------------------------------------------------------
-   Resume Specific Classes
-------------------------------------------------------------- */
+/* ==========================================================================
+   5. Resume Specific Module
+   ========================================================================== */
 .resume-actions {
     margin-bottom: 20px;
 }
 
-/* Large Fluid PDF Viewer Rule */
 .resume-viewer {
     width: 100%;
     height: 80vh;
@@ -194,14 +194,13 @@ body {
     display: block;
 }
 
-/* Primary Action Download Button */
 .btn-download {
     display: inline-flex; 
     align-items: center;
     gap: 8px;
     text-decoration: none; 
     color: #ffffff; 
-    background-color: #7952b3; /* Rich violet download button background */
+    background-color: #7952b3; /* Explicitly violet download button background */
     font-weight: 600;
     padding: 10px 18px;
     border-radius: 6px;
@@ -209,10 +208,12 @@ body {
 }
 
 .btn-download:hover {
-    background-color: #5f3e90; /* Deeper violet shade on hover */
+    background-color: #5f3e90; /* Deeper matching violet shade */
 }
 
-/* Blinking Animation for Emoji */
+/* ==========================================================================
+   6. Custom Micro-Animations & Responsive Queries
+   ========================================================================== */
 .blink-emoji {
     animation: blinker 1.5s linear infinite;
     display: inline-block;
@@ -222,7 +223,6 @@ body {
     50% { opacity: 0; }
 }
 
-/* Mobile Screens Adjustments */
 @media (max-width: 600px) {
     .profile-container {
         padding: 25px;
