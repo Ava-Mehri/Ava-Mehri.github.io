@@ -1,39 +1,103 @@
-/* Base Page Setup */
-body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    background-color: #f8f9fa;
-    color: #333;
+/* Navigation Bar Styling */
+.navbar {
     display: flex;
     justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    margin: 0;
-    padding: 20px;
-}
-
-/* Card Container */
-.profile-container {
+    gap: 20px;
     background: #ffffff;
-    max-width: 750px;
+    padding: 15px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
     width: 100%;
-    padding: 40px;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    max-width: 750px;
+    box-sizing: border-box;
 }
 
-/* Responsive Layout: Photo next to text */
-.profile-header {
-    display: flex;
-    gap: 30px;
-    align-items: center;
-    margin-bottom: 30px;
+.navbar a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background 0.2s;
 }
 
-/* Circular Profile Photo */
-.profile-photo {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
+.navbar a:hover, .navbar a.active {
+    background-color: #f0f0f0;
+    color: #0073b1;
+}
+
+/* Page Titles */
+.page-title {
+    margin-top: 0;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #0073b1;
+    padding-bottom: 8px;
+    font-size: 1.8rem;
+}
+
+/* Publications List */
+.pub-list {
+    list-style: none;
+    padding: 0;
+}
+
+.pub-item {
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 1px dashed #eee;
+}
+
+.pub-title {
+    font-weight: 600;
+    color: #111;
+    font-size: 1.1rem;
+    margin: 0 0 5px 0;
+}
+
+.pub-authors {
+    color: #555;
+    font-size: 0.95rem;
+    margin: 0 0 5px 0;
+}
+
+.pub-authors strong {
+    color: #000; /* Bold your own name */
+}
+
+.pub-venue {
+    font-style: italic;
+    color: #666;
+    font-size: 0.95rem;
+}
+
+.pub-links {
+    margin-top: 8px;
+}
+
+.pub-links a {
+    font-size: 0.85rem;
+    text-decoration: none;
+    color: #0073b1;
+    margin-right: 12px;
+    border: 1px solid #0073b1;
+    padding: 2px 8px;
+    border-radius: 4px;
+}
+
+.pub-links a:hover {
+    background: #0073b1;
+    color: #fff;
+}
+
+/* Resume/CV Viewer Wrapper */
+.resume-viewer {
+    width: 100%;
+    height: 600px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    margin-top: 15px;
+}
     object-fit: cover;
     border: 3px solid #0073b1;
 }
