@@ -3,35 +3,176 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Publications - Your Name</title>
+    <title>Publications - A. Mehri Shervedani</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for modern icons -->
+    <link rel="stylesheet" href="https://cloudflare.com">
+    <style>
+        /* Exact layout override to match the widened resume card layout */
+        .profile-container.publications-page-container {
+            max-width: 1000px;
+        }
+
+        /* Section Headings */
+        .category-heading {
+            font-size: 1.3rem;
+            color: #0073b1;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 6px;
+            font-weight: 600;
+        }
+
+        /* List Formatting */
+        .pub-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .pub-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px dashed #eee;
+            line-height: 1.6;
+        }
+
+        /* Compact Alpha-Numeric Label Box (J1, C1, etc.) */
+        .pub-label {
+            background-color: #f0f4f8;
+            color: #0073b1;
+            font-weight: 700;
+            font-size: 0.85rem;
+            padding: 4px 8px;
+            border-radius: 4px;
+            min-width: 35px;
+            text-align: center;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .pub-text {
+            color: #444;
+            font-size: 1rem;
+        }
+
+        .pub-title {
+            font-weight: 600;
+            color: #111;
+        }
+
+        .my-name {
+            font-weight: 700;
+            color: #000;
+        }
+
+        .pub-venue {
+            font-style: italic;
+            color: #555;
+        }
+    </style>
 </head>
 <body>
 
-    <main class="profile-container">
-        <!-- Top Navigation -->
+    <!-- Cohesive Card Wrapper -->
+    <main class="profile-container publications-page-container">
+        <!-- Top Navigation Bar -->
         <nav class="navbar">
             <a href="index.html">Home</a>
             <a href="publications.html" class="active">Publications</a>
             <a href="resume.html">Resume / CV</a>
         </nav>
 
-        <h2 class="page-title">Publications</h2>
+        <section class="about-me">
+            <h1 style="font-size: 1.8rem; margin-top: 0;">Publications</h1>
+            <p>A comprehensive record of my peer-reviewed journal papers, conference proceedings, workshops, and manuscripts currently under review.</p>
+        </section>
 
+        <!-- JOURNALS SECTION -->
+        <h2 class="category-heading"><i class="fa-solid fa-book-open"></i> Journal Articles</h2>
         <ul class="pub-list">
-            <!-- Example Publication entry -->
             <li class="pub-item">
-                <h3 class="pub-title">Deep Learning Architecture for Robust Data Tracking</h3>
-                <p class="pub-authors"><strong>Your Name</strong>, Jane Doe, and John Smith</p>
-                <span class="pub-venue">IEEE Transactions on Pattern Analysis, 2026</span>
-                <div class="pub-links">
-                    <a href="https://link-to-publisher.com" target="_blank">Publisher Link</a>
-                    <a href="papers/my-paper.pdf" target="_blank">Preprint PDF</a>
-                    <a href="https://github.com" target="_blank">Code Base</a>
-                </div>
+                <span class="pub-label">J1</span>
+                <span class="pub-text">
+                    <span class="my-name">A. Mehri Shervedani</span>, S. Li, N. Monaikul, B. Abbasi, M. Žefran, B. Di Eugenio, 
+                    <span class="pub-title">“Multimodal Reinforcement Learning for Robots Collaborating with Humans”</span>, 
+                    <span class="pub-venue">International Journal of Social Robotics (2025)</span>, 1–23.
+                </span>
             </li>
+            <li class="pub-item">
+                <span class="pub-label">J2</span>
+                <span class="pub-text">
+                    K. Kodthalu Shivashankara, <span class="my-name">A. Mehri Shervedani</span>, G. D. Clifford, M. A. Reyna, R. Sameni, 
+                    <span class="pub-title">“ECG-Image-Kit: A Synthetic Image Generation Toolbox to Facilitate Deep Learning-Based Electrocardiogram Digitization”</span>, 
+                    <span class="pub-venue">Physiological Measurement, 45, 055019 (2024)</span>.
+                </span>
+            </li>
+        </ul>
 
-            <!-- Duplicate the <li> element below for additional papers -->
+        <!-- CONFERENCES SECTION -->
+        <h2 class="category-heading"><i class="fa-solid fa-users-rectangle"></i> Conference Proceedings</h2>
+        <ul class="pub-list">
+            <li class="pub-item">
+                <span class="pub-label">C1</span>
+                <span class="pub-text">
+                    Z. Rysbek, S. Li, <span class="my-name">A. Mehri Shervedani</span>, M. Žefran, 
+                    <span class="pub-title">“Proactive Robot Control for Collaborative Manipulation Using Human Intent”</span>, 
+                    <span class="pub-venue">IEEE ICRA 2024</span>, Yokohama, Japan, May 2024.
+                </span>
+            </li>
+            <li class="pub-item">
+                <span class="pub-label">C2</span>
+                <span class="pub-text">
+                    S. Li, <span class="my-name">A. Mehri Shervedani</span>, M. Žefran, I. Paprotny, 
+                    <span class="pub-title">“Group-Control Motion Planning Framework for Microrobot Swarms in a Global Field”</span>, 
+                    <span class="pub-venue">The 16th Workshop on the Algorithmic Foundations of Robotics (WAFR)</span>, Chicago, USA, Oct 2024.
+                </span>
+            </li>
+            <li class="pub-item">
+                <span class="pub-label">C3</span>
+                <span class="pub-text">
+                    <span class="my-name">A. Mehri Shervedani</span>, S. Li, N. Monaikul, B. Abbasi, B. Di Eugenio, M. Žefran, 
+                    <span class="pub-title">“An End-to-End Human Simulator for Task-Oriented Multimodal Human-Robot Collaboration”</span>, 
+                    <span class="pub-venue">IEEE RO-MAN 2023</span>, Busan, South Korea, Aug 2023.
+                </span>
+            </li>
+        </ul>
+
+        <!-- WORKSHOPS SECTION -->
+        <h2 class="category-heading"><i class="fa-solid fa-chalkboard-user"></i> Workshop Papers</h2>
+        <ul class="pub-list">
+            <li class="pub-item">
+                <span class="pub-label">W1</span>
+                <span class="pub-text">
+                    <span class="my-name">A. Mehri Shervedani</span> et al., 
+                    <span class="pub-title">“Evaluating Multimodal Interaction of Robots Assisting Older Adults”</span>, 
+                    <span class="pub-venue">ICSR 2022 Workshop on Evaluating Social Assistive Robots in Healthcare, 14th International Conference on Social Robotics</span>, Florence, Italy, 2022.
+                </span>
+            </li>
+        </ul>
+
+        <!-- WORKING PAPERS SECTION -->
+        <h2 class="category-heading"><i class="fa-solid fa-hourglass-half"></i> Under Review / Ready to Submit</h2>
+        <ul class="pub-list">
+            <li class="pub-item">
+                <span class="pub-label">R1</span>
+                <span class="pub-text">
+                    <span class="my-name">A. Mehri Shervedani</span>, K. Oh, S. Li, et al., 
+                    <span class="pub-title">“High-Level Instructions to Task Plans: A Feedback-Driven Human-Robot Collaboration Task Planning with LLMs”</span>, 
+                    <span class="pub-venue">IEEE ICRA 2026</span>, Vienna, Austria, June 2026.
+                </span>
+            </li>
+            <li class="pub-item">
+                <span class="pub-label">R2</span>
+                <span class="pub-text">
+                    Z. Rysbek, KH. Oh, <span class="my-name">A. Mehri Shervedani</span>, T. Klemenčič, B. Di Eugenio, M. Žefran, 
+                    <span class="pub-title">“Robots Taking Initiative in Collaborative Object Manipulation: Lessons from Physical Human-Human Interaction”</span>.
+                </span>
+            </li>
         </ul>
     </main>
 
